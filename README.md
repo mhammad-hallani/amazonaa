@@ -25,3 +25,10 @@
     - create route for /api/products
     - return products
     - run npm start
+
+8. Fetch Products from Backend
+    - set proxy in package.json
+    - npm install axios
+    - use state hook
+    - use effect hook
+    - use reducer    
