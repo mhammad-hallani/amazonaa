@@ -46,3 +46,7 @@
     - create reating component
     - create product component
     - use reating component in product component
+
+12. Create Product Details Screen
+    - fetch product from backend
+    - create 3 colums for image, info and action
