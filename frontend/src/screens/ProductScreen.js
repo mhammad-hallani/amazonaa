@@ -9,6 +9,9 @@ import Badge from 'react-bootstrap/Badge'
 import Rating from '../components/Rating'
 import Button from 'react-bootstrap/esm/Button'
 import { Helmet } from 'react-helmet-async'
+import LoadingBox from '../components/LoadingBox'
+import MessageBox from '../components/MessageBox'
+import { getError } from '../utils'
 
 const initState = {
   loading : true,
@@ -45,7 +48,7 @@ const ProductScreen = () => {
           const result = await axios.get(`/api/products/slug/${slug}`)
           dispatch({type:'FETCH_SUCCESS', payload: result.data})
         } catch (error) {
-          dispatch({type:'FETCH_FAILED', payload: error.message})
+          dispatch({type:'FETCH_FAILED', payload: getError(error)})
         }
       }
 
@@ -53,8 +56,8 @@ const ProductScreen = () => {
     }, [slug])
 
   return (
-    state.loading ? (<div>loading...</div>)
-    : state.error? (<div>{state.error}</div>)
+    state.loading ? (<LoadingBox />)
+    : state.error? (<MessageBox variant="danger">{state.error}</MessageBox>)
     :(
     <div>
       <Row>

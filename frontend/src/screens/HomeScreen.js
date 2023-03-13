@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async'
+import LoadingBox from '../components/LoadingBox'
+import MessageBox from '../components/MessageBox'
 
 
 const initState = {
@@ -54,8 +56,8 @@ const [state, dispatch] = useReducer(logger(reducer), initState)
       <h1>Featured Products</h1>
         <div className="products">
         {
-          state.loading ?( <div>Loading...</div> ): 
-          state.error ? (<div>{state.error}</div>) : (
+          state.loading ?( <LoadingBox /> ): 
+          state.error ? (<MessageBox variant="danger">{state.error}</MessageBox>) : (
           <Row>
           {
             state.products.map(product => (
