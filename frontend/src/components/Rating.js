@@ -1,5 +1,8 @@
 import React from 'react'
 
+// fas bl className heye font awsome st5dmta hata e3ml stars
+// w ftete al index.css w zdt <Link rel.. /> for l <title> d8re
+
 const Rating = ({rating, numReviews}) => {
   return (
     <div className='rating'>
