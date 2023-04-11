@@ -71,3 +71,8 @@
     - create 2 columns
     - display items list
     - create action column
+
+17. Complete    Cart Screen
+    - click handler for inc/dec item
+    - click handler for delete item
+    - click handler for checkout
