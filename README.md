@@ -76,3 +76,5 @@
     - click handler for inc/dec item
     - click handler for delete item
     - click handler for checkout
+
+18. 
