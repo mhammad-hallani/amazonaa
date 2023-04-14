@@ -77,4 +77,13 @@
     - click handler for delete item
     - click handler for checkout
 
-18. 
+18. Create Singin Screen
+    - Create Sign in Screen
+    - add email and password
+    - add sign in button
+
+19. Connect To MongoDB Database
+    - Create atlas mongodb database
+    - install local mongodb database
+    - npm install mongoose
+    - connect to mongodb database
